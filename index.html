@@ -11,9 +11,12 @@
 		#content{
             display: grid;
             grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(150px, auto);
             grid-gap: 10px;
 			max-width: 960px;
 			margin: 0 auto;
+            /*align-items: start;
+            justify-items: end;*/
 		}
 		#content div{
 			background: #3bbced;
@@ -22,16 +25,9 @@
 		#content div:nth-child(even){
 			background: #777;
 		}
-        .nested{
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 10px;
-            grid-column: span 3;
-        }
-        .nested p{
-            border: 1px solid white;
-            padding: 20px;
-            margin: 0;
+        .one{
+            justify-self: end;
+            align-self: start;
         }
 	</style>
 </head>
@@ -39,15 +35,10 @@
 
 	<div id="content">
 
-		<div>1</div>
+		<div class="one">1</div>
 		<div>2</div>
 		<div>3</div>
-		<div class="nested">
-            <p>1</p>
-            <p>2</p>
-            <p>3</p>
-            <p>4</p>
-        </div>
+		<div>4</div>
 		<div>5</div>
 		<div>6</div>
 	
